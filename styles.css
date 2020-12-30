@@ -1,0 +1,246 @@
+:root {
+    --body-background-color: #E7E4E4;
+    --div-background-color: #2B2B2B;
+    --button-background-color:#60B564;
+    --black-color:black;
+    --white-color:white;
+}
+
+/* html{
+    background: url(geu_img.jpg);
+    height:100%;
+   
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+}  */
+body {
+    margin: 0px;
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-button {
+    opacity: 0;
+    pointer-events: none;
+
+}
+
+.close-icon {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.div1 {
+    display: flex;
+    width: 20%;
+    color: var(--white-color);
+    background-color: var(--div-background-color);
+    height: 100vh;
+    flex-direction: column;
+    /* padding:10px; */
+    padding-top: 3vh;
+
+    align-items: center;
+    /* z-index:100; */
+
+}
+
+
+.div3 {
+    width: 20%;
+    background-color: var(--div-background-color);
+    height: 100vh;
+    text-align: center;
+}
+
+.search-bar {
+    width: 90%;
+    height: 5vh;
+    border: 1px;
+    border-radius: 30px;
+    align-self: center;
+    padding: 5px;
+    text-align: center;
+    /* background-color: #4B5563; */
+    color: var(--black-color);
+    text-decoration: none;
+    margin-bottom: 5vh;
+    outline: none;
+}
+
+.div1 ul {
+    width: 80%;
+    list-style: none;
+    padding: 0px;
+    /* padding-top:40px; */
+    align-self: center;
+
+}
+
+.div1 li {
+
+    width: 100%;
+    height: 5.5vh;
+    border: 1px none;
+    border-radius: 30px;
+    align-self: center;
+    /* text-align: left;    */
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    /* vertical-align:center; */
+    vertical-align: middle;
+    padding-left: 5px;
+    background-color: var(--button-background-color);
+    color: var(--white-color);
+    text-decoration: none;
+    margin-bottom: 3.5vh;
+}
+
+.div1 li a {
+    text-decoration: none;
+    color: var(--white-color);
+    margin-left: 10px
+}
+
+.div1 img {
+    width: 70%;
+    height: 20vh;
+    margin-bottom: 2vh;
+    border-radius: 1rem;
+}
+
+.div1 a {
+    /* text-decoration: underline; */
+    color: var(--white-color);
+    margin-left: 10px;
+}
+
+.div2 h1 {
+    color: white;
+    padding-left: 15px;
+    text-align: center;
+    z-index: 100;
+    margin-top: 10vh;
+    font-size: 2.5rem;
+}
+
+.div2 .div2-content {
+    width: 40%;
+    height: 40vh;
+    margin: auto;
+    margin-top: 10vh;
+    color: white;
+    text-align: center;
+    z-index: 53;
+}
+
+.recents {
+    margin-top: 8vh;
+    padding-top: 5px;
+    color: white;
+    border: 3px solid;
+    border-color: red transparent;
+    height: 30vh;
+}
+.calendar{
+    padding-top:10vh;
+}
+
+@media screen and (max-width:750px) {
+    .wrapper {
+        display: block;
+
+    }
+
+    .nav-button {
+        opacity: 1;
+        pointer-events: visible;
+        color: white;
+        font-size: 30px;
+        padding: 0px;
+    }
+
+    .close-icon {
+        margin-top: 3px;
+        margin-bottom: 1vh;
+        opacity: 1;
+        pointer-events: visible;
+        color: white;
+        font-size: 30px;
+        padding: 0px;
+    }
+
+    .div1 {
+        position: fixed;
+        left: -100%;
+        width: 60%;
+        height: 100vh;
+        z-index: 1000;
+        transition: 1s;
+        padding-top: 0px;
+    }
+
+    .show {
+        left: 0;
+    }
+
+    .div2 {
+        width: 100%;
+        /* background-color: var(--body-background-color); */
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 0px;
+        /* overflow: hidden; */
+    }
+
+    .div2 h1 {
+        color: white;
+        /* padding-left:15px; */
+        /* text-align:center; */
+        z-index: 100;
+        margin-top: 10vh;
+        font-size: 2.5rem;
+    }
+
+    .div2 .div2-content {
+
+        width: 40%;
+        height: 40vh;
+        margin: auto;
+        margin-top: 10vh;
+        color: white;
+        text-align: center;
+        z-index: 53;
+        margin-bottom:0;
+        font-size: 1rem;
+    }
+
+    .div3 {
+        margin-top: 0px;
+        width: 100%;
+        background-color: var(--div-background-color);
+        height: 100vh;
+        text-align: center;
+    }
+    .recents {
+        margin-top: 0vh;
+        padding-top: 5px;
+        color: white;
+        border: 3px solid;
+        border-color: red transparent;
+        height: 30vh;
+    
+    }
+}
